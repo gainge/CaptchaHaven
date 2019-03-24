@@ -5,8 +5,8 @@ input[type=text] {
     border-radius: 4px;
     box-sizing: border-box;
 }
-button{
-  background-color: #4CAF50;
+button {
+    background-color: #4CAF50;
     border: none;
     color: white;
     padding: 12px 30px;
@@ -14,7 +14,61 @@ button{
     margin: 4px 2px;
     cursor: pointer;
 }
-canvas{
+
+button:hover {
+    background-color: rgb(61, 145, 64);
+}
+
+
+canvas {
   /*prevent interaction with the canvas*/
   pointer-events:none;
+}
+
+body {
+    background-color: aliceblue;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    font-family: Verdana, sans-serif;
+    text-align: center;
+}
+
+#captcha-container {
+    display: inline-block;
+    padding: 2rem;
+    /* background-color: blanchedalmond; */
+    margin: auto;
+}
+
+.rotate {
+    -webkit-animation: rotation 6s infinite linear;
+}
+
+.rotateInv {
+    -webkit-animation: rotationInv 5.5s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
+}
+
+@-webkit-keyframes rotationInv {
+    from {
+        -webkit-transform: rotate(359deg);
+    }
+    to {
+        -webkit-transform: rotate(0deg);  
+    }
+}
+
+
+#image-container {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
